@@ -24,18 +24,30 @@ h3 {
   cursor: default !important; }
 
 .left_side {
-  width: 48px;
+  width: 150px;
   background-color: #292929;
   height: 100vh;
   float: left;
   position: relative; }
   .left_side ul li {
-    width: 24px;
+    width: 100%px;
     padding: 12px; }
-    .left_side ul li:hover {
+    .left_side h4 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      padding: 10px;
+      text-align: center; }
+    .left_side button {
+      border: none;
+    background: none;
+    color: white;
+    font-family: "SFPro SemiBold";
+  widows: 100%;}
+    .left_side ul li:hover, .active {
       background: #7F21F4;
       border-radius: 5px; }
-    .left_side ul li a.hover {
+    .left_side ul li a.hover, .active {
       background: #7F21F4; }
     .left_side ul li a img {
       display: block;
