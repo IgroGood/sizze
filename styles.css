@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "SFPro SemiBold";
+  src: url("fonts/SF-Pro-Display-Semibold.otf") format("opentype"); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style-type: none; }
+
+li {
+  cursor: pointer; }
+
+label {
+  font-family: "SFPro SemiBold";
+  font-size: 12px; }
+
+h3 {
+  font-family: "SFPro SemiBold";
+  margin-bottom: 5px;
+  display: block;
+  color: white;
+  cursor: default !important; }
+
+.left_side {
+  width: 48px;
+  background-color: #292929;
+  height: 100vh;
+  float: left;
+  position: relative; }
+  .left_side ul li {
+    width: 24px;
+    padding: 12px; }
+    .left_side ul li:hover {
+      background: #7F21F4;
+      border-radius: 5px; }
+    .left_side ul li a.hover {
+      background: #7F21F4; }
+    .left_side ul li a img {
+      display: block;
+      margin: 0 auto; }
+
+.right_side {
+  width: 80px;
+  background-color: #292929;
+  float: right;
+  height: 100vh; }
+  .right_side ul {
+    position: relative; }
+    .right_side ul > li {
+      padding: 7px;
+      font-size: 14px;
+      color: white;
+      font-family: "SFPro SemiBold"; }
+      .right_side ul > li:hover {
+        background: #7F21F4;
+        border-radius: 5px; }
+      .right_side ul > li a {
+        text-decoration: none;
+        text-align: left;
+        display: block;
+        color: white;
+        font-family: "SFPro SemiBold"; }
+        .right_side ul > li a img {
+          display: block;
+          margin: 0 auto; }
+
+.scene {
+  height: 100vh;
+  background-color: aliceblue;
+  float: left; }
+
+.scale_scene {
+  width: 140px;
+  position: absolute;
+  bottom: 0;
+  padding: 16px 80px; }
+  .scale_scene input {
+    width: 50px;
+    height: 28px;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid #ddddde;
+    border-radius: 3px;
+    float: left;
+    box-sizing: border-box;
+    margin: 0 6px 0 6px; }
+  .scale_scene img {
+    float: left;
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-color: #292929;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 15px; }
+    .scale_scene img:hover {
+      background-color: #7F21F4; }
+
+.menu li:hover {
+  background: none !important; }
+
+.menu_export, .menu_font, .menu_transform, .menu_color, .menu_align, .menu_links, .menu_layers {
+  display: none;
+  position: absolute;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: #292929;
+  color: white;
+  font-size: 12px; }
+  .menu_export.active, .menu_font.active, .menu_transform.active, .menu_color.active, .menu_align.active, .menu_links.active, .menu_layers.active {
+    display: block; }
+
+.right_side li {
+  position: relative; }
+
+.right_side h2 {
+  padding: 2px; }
+
+.menu_export, .menu_layers {
+  width: 223px;
+  left: -223px; }
+  .menu_export ul, .menu_layers ul {
+    padding: 5px; }
+    .menu_export ul li:not(:first-child):not(:last-child), .menu_layers ul li:not(:first-child):not(:last-child) {
+      position: relative; }
+      .menu_export ul li:not(:first-child):not(:last-child) ::after, .menu_layers ul li:not(:first-child):not(:last-child) ::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        height: 1px;
+        background: black;
+        width: 190px;
+        bottom: 0; }
+    .menu_export ul li:not(:first-child), .menu_layers ul li:not(:first-child) {
+      padding: 10px; }
+    .menu_export ul li:first-child, .menu_layers ul li:first-child {
+      background: none !important; }
+
+.menu_font {
+  display: none; }
+
+.menu_transform {
+  display: none; }
+
+.menu_font, .menu_transform {
+  position: absolute;
+  width: 270px;
+  left: -270px;
+  padding: 18px;
+  font-family: "SFPro SemiBold";
+  font-size: 12px; }
+  .menu_font .select_blocks, .menu_font .input_blocks, .menu_transform .select_blocks, .menu_transform .input_blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap; }
+    .menu_font .select_blocks label, .menu_font .input_blocks label, .menu_transform .select_blocks label, .menu_transform .input_blocks label {
+      color: white;
+      display: block;
+      margin-bottom: 3px; }
+    .menu_font .select_blocks input, .menu_font .select_blocks select, .menu_font .input_blocks input, .menu_font .input_blocks select, .menu_transform .select_blocks input, .menu_transform .select_blocks select, .menu_transform .input_blocks input, .menu_transform .input_blocks select {
+      border: none !important;
+      padding: 8px;
+      color: white;
+      background-color: black; }
+    .menu_font .select_blocks .select_block, .menu_font .select_blocks .input_block, .menu_font .select_blocks input, .menu_font .select_blocks select, .menu_font .input_blocks .select_block, .menu_font .input_blocks .input_block, .menu_font .input_blocks input, .menu_font .input_blocks select, .menu_transform .select_blocks .select_block, .menu_transform .select_blocks .input_block, .menu_transform .select_blocks input, .menu_transform .select_blocks select, .menu_transform .input_blocks .select_block, .menu_transform .input_blocks .input_block, .menu_transform .input_blocks input, .menu_transform .input_blocks select {
+      width: 112px; }
+    .menu_font .select_blocks .select_block, .menu_font .select_blocks .input_block, .menu_font .input_blocks .select_block, .menu_font .input_blocks .input_block, .menu_transform .select_blocks .select_block, .menu_transform .select_blocks .input_block, .menu_transform .input_blocks .select_block, .menu_transform .input_blocks .input_block {
+      margin-bottom: 10px; }
+    .menu_font .select_blocks input, .menu_font .select_blocks select, .menu_font .input_blocks input, .menu_font .input_blocks select, .menu_transform .select_blocks input, .menu_transform .select_blocks select, .menu_transform .input_blocks input, .menu_transform .input_blocks select {
+      box-sizing: border-box; }
+
+.menu_color {
+  display: none;
+  width: 270px;
+  left: -270px;
+  padding: 18px; }
+  .menu_color .pick_color {
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-color: #7F21F4;
+    margin-right: 8px; }
+  .menu_color input {
+    border: none !important;
+    padding: 8px;
+    color: white;
+    background-color: black; }
+  .menu_color .select_color {
+    margin-bottom: 8px;
+    margin-top: 4px; }
+
+.menu_align {
+  width: 240px;
+  left: -240px;
+  padding: 10px; }
+  .menu_align li {
+    float: left; }
+  .menu_align h3 {
+    padding-left: 7px; }
+
+.menu_links {
+  width: 260px;
+  left: -260px;
+  padding: 18px; }
+  .menu_links label {
+    display: block;
+    margin-bottom: 5px; }
+  .menu_links select {
+    border: none !important;
+    padding: 8px;
+    color: white;
+    background-color: black;
+    width: 100%; }
+
+.menu_layers img {
+  float: right;
+  margin: 0 3px 0 0 !important; }
+
+.menu_layers li {
+  padding: 10px !important; }

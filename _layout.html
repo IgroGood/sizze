@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="//daybrush.com/moveable/release/latest/dist/moveable.min.js"></script>
+    <script type="text/javascript" src="bundle.js"></script>
+</head>
+<body>
+<div class="main" style="position: relative">
+    <div class="left_side">
+        <ul id="list_left_side">
+            <li><a href=""><img src="img/home.svg" alt=""></a></li>
+            <li class="mode" id="move_mode"><a href="" ><img src="img/cursor.svg" alt=""></a></li>
+            <li class="mode" id="text_mode"><a href=""  ><img src="img/addText.svg" alt=""></a></li>
+            <li><a href="" id="add_picture"><img src="img/picture.svg" alt=""></a></li>
+        </ul>
+        <div class="scale_scene">
+            <img src="img/minus.svg" alt="">
+            <input type="text" min="0" max="100" step="1" value="100">
+            <img src="img/plus.svg" alt="">
+        </div>
+    </div>
+    <div class="scene">
+        <div class="drawing_surface" style="width: 200px; height: 300px; border: 1px solid #247aff">
+            
+            
+            <!---menu--> 
+            
+            
+             <div class="brick"  class="snackbar-C61RwL" style="box-sizing:border-box;-webkit-text-size-adjust:none;background-color:rgba(255,255,255,1.0);border-color:rgba(0,0,0,0);border-radius:10px;border-style:solid;border-width:0.5px;box-shadow:0px 0px 24px rgba(0,0,0,0.16) , 0px 0px 2px rgba(0,0,0,0.08);height:56px;left:8px;overflow:hidden;position:relative;top:8px;width:359px;" >
+     
+            
+            
+            <svg  class="brick"  class="x-icon-U0l77Z" style="box-sizing:border-box;background-color:rgba(255,255,255,0);height:24px;left:12px;position:absolute;top:16px;width:24px;"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 0C18.6289 0 24 5.37258 24 12L23.9962 12.305C23.8344 18.7929 18.5255 24 12 24L11.695 23.9962C5.20713 23.8344 0 18.5255 0 12L0.00379986 11.695C0.165607 5.20713 5.47454 0 12 0ZM18.2918 7.66519C17.9107 7.29875 17.292 7.29612 16.9121 7.6614L10 14.3077L7.09412 11.5136C6.70693 11.1413 6.09027 11.144 5.7082 11.5113L5.6918 11.5271C5.31071 11.8936 5.31126 12.4916 5.69523 12.8608L9.30477 16.3315C9.68723 16.6993 10.3095 16.7024 10.6913 16.3353L18.3087 9.01084C18.6902 8.64404 18.6903 8.04834 18.3082 7.68096L18.2918 7.66519Z" fill="#7D2BE5"/>
+</svg>
+            
+            
+          <div class="brick with_text" contenteditable="false" class="x-text-U0l77Z" style="box-sizing:border-box;-webkit-text-size-adjust:none;background-color:rgba(0,0,0,0);color:rgba(0,0,0,1.0);font-family:'SF Pro Text', Helvetica, Arial, serif;font-size:15.0px;font-style:normal;font-weight:400;height:auto;left:48px;letter-spacing:-0.24px;line-height:20.0px;position:absolute;text-align:left;top:18px;white-space:nowrap;width:auto;" >Ссылка скопирована</div>
+          <div class="brick with_text" contenteditable="false" class="x-label-U0l77Z" style="box-sizing:border-box;-webkit-text-size-adjust:none;background-color:rgba(125,43,229,0);color:rgba(125,43,229,1.0);font-family:'SF Pro Text', Helvetica, Arial, serif;font-size:14.0px;font-style:normal;font-weight:500;height:auto;left:260px;letter-spacing:-0.15px;line-height:18.0px;position:absolute;text-align:center;top:18px;white-space:nowrap;width:auto;" >Поделиться</div>
+        </div>
+            
+            
+            <!--menu 1-->
+            
+            <div class="brick" class="cell-set-1-default-item anima-screen" style="background-color:rgba(255,255,255,1.0);border-color:rgba(255,255,255,0);border-style:solid;border-width:1px;height:48px;overflow:hidden;position:relative;width:375px;pointer-events:auto;flex-shrink:0;overflow-wrap:break-word;word-wrap:break-word;word-break:break-word; border-radius: 0.1px;" >
+      
+          
+          
+          <svg class="brick" style="box-sizing:border-box;background-color:rgba(255,255,255,0);height:28px;left:16px;position:absolute;top:10px;width:28px;" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.0046 3.5C18.5359 3.5 22 7.29407 22 12.0815L21.9954 13.9081C21.9958 14.2154 22.1946 14.5707 22.7335 15.205C22.8012 15.2847 22.8649 15.3585 23.0043 15.5195C24.0744 16.7577 24.5 17.4745 24.5 18.5882C24.5 19.0893 24.443 19.4785 24.2056 19.9456C23.6996 20.9409 22.6182 21.5 21 21.5L18.3989 21.5007C17.731 23.7645 16.2123 25 14 25C11.7877 25 10.269 23.7645 9.60115 21.5007L7 21.5C5.33483 21.5 4.24203 20.9258 3.75797 19.8962C3.54802 19.4497 3.5 19.0875 3.5 18.5882C3.5 17.475 3.92475 16.7582 4.99283 15.5202C5.13191 15.3592 5.19552 15.2854 5.26308 15.2057C5.80171 14.5706 6 14.2151 6 13.9071V12.0789C6 7.29571 9.47202 3.5 14.0046 3.5ZM16.2794 21.5008H11.7206C12.1714 22.5432 12.8987 23 14 23C15.1013 23 15.8286 22.5432 16.2794 21.5008ZM14.0046 5.5C10.6184 5.5 8 8.36245 8 12.0789V13.9071C8 14.8348 7.6156 15.5239 6.78841 16.4993C6.71509 16.5857 6.64587 16.6661 6.50717 16.8266C5.74712 17.7076 5.5 18.1246 5.5 18.5882C5.5 18.8144 5.51597 18.9348 5.56791 19.0453C5.69184 19.3089 6.05558 19.5 7 19.5H21C21.9142 19.5 22.2863 19.3076 22.4228 19.0392C22.4818 18.923 22.5 18.7989 22.5 18.5882C22.5 18.1251 22.2524 17.7081 21.4911 16.8273C21.3522 16.6668 21.2828 16.5864 21.2094 16.5C20.3805 15.5245 19.9954 14.8353 19.9954 13.9071L20 12.0789C20 8.36008 17.3886 5.5 14.0046 5.5Z" fill="#7D2BE5"/>
+</svg>
+          
+        <div class="brick with_text" contenteditable="false" class="x-title-C61RwL" style="box-sizing:border-box;-webkit-text-size-adjust:none;background-color:rgba(0,0,0,0);color:rgba(0,0,0,1.0);font-family:'SF Pro Text', Helvetica, Arial, serif;font-size:17.0px;font-style:normal;font-weight:400;height:auto;left:60px;letter-spacing:-0.41px;line-height:22.0px;position:absolute;text-align:left;top:12px;white-space:nowrap;width:auto;" >Уведомления</div>
+        <div class="brick with_text" contenteditable="false" class="x-detail-C61RwL" style="box-sizing:border-box;-webkit-text-size-adjust:none;background-color:rgba(129,140,153,0);color:rgba(129,140,153,1.0);font-family:'SF Pro Text', Helvetica, Arial, serif;font-size:17.0px;font-style:normal;font-weight:400;height:auto;left:296px;letter-spacing:-0.41px;line-height:22.0px;position:absolute;text-align:right;top:12px;white-space:nowrap;width:auto;" >Вкл.</div>
+          
+          <svg class="brick" class="icon-C61RwL" style="box-sizing:border-box;background-color:rgba(255,255,255,0);height:24px;left:343px;position:absolute;top:12px;width:16px;" width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.70557 7.70575C4.31578 7.31596 4.31791 6.68186 4.70587 6.2939L4.79372 6.20605C5.18367 5.81609 5.8133 5.81348 6.20778 6.20796L11.2918 11.292C11.6828 11.683 11.6863 12.3135 11.2918 12.708L6.20778 17.792C5.81677 18.183 5.18168 18.1819 4.79372 17.7939L4.70587 17.706C4.31592 17.3161 4.31257 16.6872 4.70557 16.2942L8.99979 12L4.70557 7.70575Z" fill="#B8C1CC"/>
+</svg>
+          
+          
+      </div>
+            
+            <!--button-->
+            
+             <div class="brick frame-6480-C61RwL" style="box-sizing:border-box;-webkit-text-size-adjust:none;background-color:rgba(95,0,217,1.0);border-radius:10px;height:50px;left:70px;overflow:hidden;position:relative;top:102px;width:351px;" >
+          <div class="brick with_text button" contenteditable="false" class="next-step-SC9gaq" style="box-sizing:border-box;-webkit-text-size-adjust:none;background-color:rgba(255,255,255,0);border-color:rgba(255,255,255,0);border-style:solid;border-width:1px;color:rgba(255,255,255,1.0);font-family:'SF Pro Display', Helvetica, Arial, serif;font-size:17.0px;font-style:normal;font-weight:700;height:auto;left:138px;letter-spacing:0.00px;line-height:17.7px;position:absolute;text-align:left;top:16px;white-space:nowrap;width:auto;" >Next step</div>
+        </div>
+            
+            <!--rectangle-->
+            
+        <div class="brick" data-s-keep-ratio="true" style="border-color:rgba(0,0,0,0); border-radius:10px;border-style:solid;border-width:0.5px; background-color: #7F21F4; top:10px; left: 50px; height: 100px; width: 100px;"></div>
+        <div class="brick" data-s-keep-ratio="true" style="border-color:rgba(0,0,0,0);border-radius:1px;border-style:solid;border-width:0.5px; background-color: #7F21F4; left: 50px; top: 150px; height: 50px; width: 50px;"></div>
+            
+            
+            
+    </div>
+    </div>
+    <div class="right_side">
+        <ul id="list_right_side">
+            <li><a href=""><img src="img/play.svg" alt=""></a></li>
+            <li class="open_menu" data-menu=".menu_export">Export</li>
+            <div class="menu menu_export">
+                <ul>
+                    <li><h3>Export</h3></li>
+                    <li><a href="">Png</a></li>
+                    <li><a href="">Jpeg</a></li>
+                    <li><a href="">Svg</a></li>
+                </ul>
+            </div>
+            <li class="open_menu" data-menu=".menu_font">Font</li>
+            <div class="menu menu_font">
+                <h3>Font</h3>
+                <div class="select_blocks">
+                    <div class="select_block">
+                        <label for="select_font">Font</label>
+                        <select name="select_font" id="select_font">
+                            <option value="">Font1</option>
+                            <option value="">Font2</option>
+                            <option value="">Font3</option>
+                        </select>
+                    </div>
+                    <div class="input_block">
+                        <label for="input_size">Size</label>
+                        <input type="text" id="input_size">
+                    </div>
+                    <div class="select_block">
+                        <label for="select_align">Alignt</label>
+                        <select name="select_font" id="select_align">
+                            <option value="">Center</option>
+                            <option value="">Right</option>
+                            <option value="">Left</option>
+                        </select>
+                    </div>
+                    <div class="select_block">
+                        <label for="select_style">Style</label>
+                        <select name="select_style" id="select_style">
+                            <option value="">Style1</option>
+                            <option value="">Style2</option>
+                            <option value="">Style3</option>
+                        </select>
+                    </div>
+                    <div class="select_block">
+                        <label for="select_font">Weight</label>
+                        <select name="select_weight" id="select_weight">
+                            <option value="">Weight1</option>
+                            <option value="">Weight2</option>
+                            <option value="">Weight3</option>
+                        </select>
+                    </div>
+                    <div class="select_block">
+                        <label for="select_decoration">Decoration</label>
+                        <select name="select_Decoration" id="select_decoration">
+                            <option value="">Done</option>
+                            <option value="">Dtwo</option>
+                            <option value="">Dethre</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <li class="open_menu" data-menu=".menu_transform">Transform</li>
+            <div class="menu menu_transform">
+                <h3>Transform</h3>
+                <div class="input_blocks">
+                    <div class="input_block">
+                        <label for="input_x">X</label>
+                        <input type="text" id="input_x">
+                    </div>
+                    <div class="input_block">
+                        <label for="input_y">Y</label>
+                        <input type="text" id="input_y">
+                    </div>
+                    <div class="input_block">
+                        <label for="input_width">Width</label>
+                        <input type="text" id="input_width">
+                    </div>
+                    <div class="input_block">
+                        <label for="input_height">Height</label>
+                        <input type="text" id="input_height">
+                    </div>
+                    <div class="input_block">
+                        <label for="input_border_radius">Border-radius</label>
+                        <input type="text" id="input_border_radius">
+                    </div>
+                    <div class="input_block">
+                        <label for="input_rotate">Rotate</label>
+                        <input type="text" id="input_rotate">
+                    </div>
+                </div>
+            </div>
+            <li class="open_menu" data-menu=".menu_color">Color</li>
+            <div class="menu menu_color">
+                <h3>Color</h3>
+                <label for="background_color">Background color</label>
+                <div class="select_color">
+                    <div class="pick_color"></div>
+                    <input type="text" id="background_color">
+                </div>
+                <label for="border_color">Border color</label>
+                <div class="select_color">
+                    <div class="pick_color"></div>
+                    <input type="text" id="border_color">
+                </div>
+            </div>
+            <li class="open_menu" data-menu=".menu_align">Align</li>
+            <div class="menu menu_align">
+                <h3>Align</h3>
+                <ul>
+                    <li><a href=""><img src="img/left.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/center.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/right.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/top.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/middle.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/bottiom.svg" alt=""></a></li>
+                </ul>
+            </div>
+            <li class="open_menu" data-menu=".menu_links">Links</li>
+            <div class="menu menu_links">
+                <h3>Links</h3>
+                <label for="select_links">Flow to</label>
+                <select name="select_links" id="select_links">
+                    <option value="">Link1</option>
+                    <option value="">Link2</option>
+                    <option value="">Link3</option>
+                </select>
+            </div>
+            <li class="open_menu" data-menu=".menu_layers">Layers</li>
+            <div class="menu menu_layers">
+                <ul>
+                    <li><h3>Layers</h3></li>
+                    <li><a href="">(button)<img src="img/layers.svg" alt=""></a></li>
+                    <li><a href="">(line)<img src="img/layers.svg" alt=""></a></li>
+                    <li><a href="">(rectangle)<img src="img/layers.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+        <!--   (модальные окна и т.д.)     -->
+    <div class="rotate_text" style="display: block; position: absolute; width: 30px; height: 30px"></div>
+       <style>
+       
+          
+@import url('https://fonts.googleapis.com/css?family=SF+Pro%20Text:500,400');
+
+@import url('https://fonts.googleapis.com/css?family=SF+Pro%20Text:400');
+      </style>
+
+</div>
+</body>
+</html>

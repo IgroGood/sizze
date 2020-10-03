@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="bundle.js"></script>
+</head>
+<body>
+<div class="left_side">
+    <ul>
+        <li><a href=""><img src="img/home.svg" alt=""></a></li>
+        <li><a href=""><img src="img/cursor.svg" alt=""></a></li>
+        <li><a href=""><img src="img/addText.svg" alt=""></a></li>
+        <li><a href=""><img src="img/picture.svg" alt=""></a></li>
+    </ul>
+    <div class="scale_scene">
+        <img src="img/minus.svg" alt="">
+        <input type="text" min="0" max="100" step="1" value="100">
+        <img src="img/plus.svg" alt="">
+    </div>
+</div>
+<div class="scene"></div>
+<div class="right_side">
+    <ul>
+        <li><a href=""><img src="img/play.svg" alt=""></a></li>
+        <li class="open_menu" data-menu=".menu_export">Export</li>
+        <div class="menu menu_export">
+            <ul>
+                <li><h3>Export</h3></li>
+                <li><a href="">Png</a></li>
+                <li><a href="">Jpeg</a></li>
+                <li><a href="">Svg</a></li>
+            </ul>
+        </div>
+        <li class="open_menu" data-menu=".menu_font">Font</li>
+        <div class="menu menu_font">
+            <h3>Font</h3>
+            <div class="select_blocks">
+                <div class="select_block">
+                    <label for="select_font">Font</label>
+                    <select name="select_font" id="select_font">
+                        <option value="">Font1</option>
+                        <option value="">Font2</option>
+                        <option value="">Font3</option>
+                    </select>
+                </div>
+                <div class="input_block">
+                    <label for="input_size">Size</label>
+                    <input type="text" id="input_size">
+                </div>
+                <div class="select_block">
+                    <label for="select_align">Alignt</label>
+                    <select name="select_font" id="select_align">
+                        <option value="">Center</option>
+                        <option value="">Right</option>
+                        <option value="">Left</option>
+                    </select>
+                </div>
+                <div class="select_block">
+                    <label for="select_style">Style</label>
+                    <select name="select_style" id="select_style">
+                        <option value="">Style1</option>
+                        <option value="">Style2</option>
+                        <option value="">Style3</option>
+                    </select>
+                </div>
+                <div class="select_block">
+                    <label for="select_font">Weight</label>
+                    <select name="select_weight" id="select_weight">
+                        <option value="">Weight1</option>
+                        <option value="">Weight2</option>
+                        <option value="">Weight3</option>
+                    </select>
+                </div>
+                <div class="select_block">
+                    <label for="select_decoration">Decoration</label>
+                    <select name="select_Decoration" id="select_decoration">
+                        <option value="">Done</option>
+                        <option value="">Dtwo</option>
+                        <option value="">Dethre</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <li class="open_menu" data-menu=".menu_transform">Transform</li>
+        <div class="menu menu_transform">
+            <h3>Transform</h3>
+            <div class="input_blocks">
+                <div class="input_block">
+                    <label for="input_x">X</label>
+                    <input type="text" id="input_x">
+                </div>
+                <div class="input_block">
+                    <label for="input_y">Y</label>
+                    <input type="text" id="input_y">
+                </div>
+                <div class="input_block">
+                    <label for="input_width">Width</label>
+                    <input type="text" id="input_width">
+                </div>
+                <div class="input_block">
+                    <label for="input_height">Height</label>
+                    <input type="text" id="input_height">
+                </div>
+                <div class="input_block">
+                    <label for="input_border_radius">Border-radius</label>
+                    <input type="text" id="input_border_radius">
+                </div>
+                <div class="input_block">
+                    <label for="input_rotate">Rotate</label>
+                    <input type="text" id="input_rotate">
+                </div>
+            </div>
+        </div>
+        <li class="open_menu" data-menu=".menu_color">Color</li>
+        <div class="menu menu_color">
+            <h3>Color</h3>
+            <label for="background_color">Background color</label>
+            <div class="select_color">
+                <div class="pick_color"></div>
+                <input type="text" id="background_color">
+            </div>
+            <label for="border_color">Border color</label>
+            <div class="select_color">
+                <div class="pick_color"></div>
+                <input type="text" id="border_color">
+            </div>
+        </div>
+        <li class="open_menu" data-menu=".menu_align">Align</li>
+        <div class="menu menu_align">
+            <h3>Align</h3>
+            <ul>
+                <li><a href=""><img src="img/left.svg" alt=""></a></li>
+                <li><a href=""><img src="img/center.svg" alt=""></a></li>
+                <li><a href=""><img src="img/right.svg" alt=""></a></li>
+                <li><a href=""><img src="img/top.svg" alt=""></a></li>
+                <li><a href=""><img src="img/middle.svg" alt=""></a></li>
+                <li><a href=""><img src="img/bottiom.svg" alt=""></a></li>
+            </ul>
+        </div>
+        <li class="open_menu" data-menu=".menu_links">Links</li>
+        <div class="menu menu_links" >
+            <h3>Links</h3>
+            <label for="select_links">Flow to</label>
+            <select name="select_links" id="select_links">
+                <option value="">Link1</option>
+                <option value="">Link2</option>
+                <option value="">Link3</option>
+            </select>
+        </div>
+        <li class="open_menu" data-menu=".menu_layers">Layers</li>
+        <div class="menu menu_layers">
+            <ul>
+                <li><h3>Layers</h3></li>
+                <li><a href="">(button)<img src="img/layers.svg" alt=""></a></li>
+                <li><a href="">(line)<img src="img/layers.svg" alt=""></a></li>
+                <li><a href="">(rectangle)<img src="img/layers.svg" alt=""></a></li>
+            </ul>
+        </div>
+
+    </ul>
+</div>
+
+</body>
+</html>
