@@ -7,6 +7,19 @@ var currentActiveElement = null;
 var moveable = null;
 var boundsFrameIphoneX = { top: 40, left: 2, bottom: 790, right: 370 };
 
+var _resizable = true;
+var _draggable = true;
+var _scalable = true;
+var _rotatable = true;
+var _warpable = false;
+var _pinchable = false;
+var _origin = true;
+var _snappable = true;
+var _keepRatio = false; // прапорциональное
+var _edge = true;
+var _originDraggable = true;
+
+
 function newRectangle() {
 	let newBlock = document.createElement('div');
 	newBlock.className = "rectangle";
@@ -15,8 +28,9 @@ function newRectangle() {
 	newBlock.addEventListener('click', function (e) { //dblclick?
 		if (moveableStatus == true)
 			moveableStop();
-		else
+		else{
 			moveableStart(newBlock.id, curentScreenForm, boundsFrameIphoneX);
+		}
 	});
 	moveableStart(newBlock.id, curentScreenForm, boundsFrameIphoneX);
 }
@@ -42,23 +56,22 @@ function newText() {
 
 function moveableStart(_elementId, _container, _bounds) {
 	moveableStop();
+	console.log(boundsFrameIphoneX);
 	moveable = new Moveable(_container, {
 		target: document.getElementById(_elementId),
 		container: _container,
-		resizable: true,
-		draggable: true,
-		resizable: true,
-		scalable: true,
-		rotatable: true,
-		warpable: true,
-		pinchable: true,
-		origin: true,
-		snappable: true,
+		resizable: _resizable,
+		draggable: _draggable,
+		scalable: _scalable,
+		rotatable: _rotatable,
+		warpable: _warpable,
+		pinchable: _pinchable,
+		origin: _origin,
+		snappable: _snappable,
 		bounds: _bounds,
-		keepRatio: true,
-		edge: false,
-		origin: true,
-		originDraggable: true,
+		keepRatio: _keepRatio,
+		edge: _edge,
+		originDraggable: _originDraggable,
 		throttleDrag: 0,
 		throttleResize: 0,
 		throttleScale: 0,
@@ -197,11 +210,18 @@ function newScreenForm() {
 	curentScreenForm.addEventListener('dblclick', function (e) {
 		moveableStart(child.id, document.body);
 		curentScreenForm = child;
+		moveable.resizable = false;
+		moveable.scalable = false;
+		moveable.rotatable = false;
 	});
 	curentScreenForm.addEventListener('click', function (e) {
 		curentScreenForm = child;
+		
 	});
 	moveableStart(child.id, document.body);
+	moveable.resizable = false;
+	moveable.scalable = false;
+	moveable.rotatable = false;
 	numbersOfScreens++;
 }
 
