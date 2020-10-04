@@ -46,12 +46,12 @@ function newText() {
 		if (moveableStatus == true)
 			moveableStop();
 		else
-			moveableStart(newBlock.id);
+			moveableStart(newBlock.id, curentScreenForm, boundsFrameIphoneX);
 	});
 	newBlock.addEventListener('dblclick', function (e) {
 		moveableStop();
 	});
-	moveableStart(newBlock.id);
+	moveableStart(newBlock.id, curentScreenForm, boundsFrameIphoneX);
 }
 
 function moveableStart(_elementId, _container, _bounds) {
