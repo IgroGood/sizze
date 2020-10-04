@@ -24,11 +24,12 @@ h3 {
   cursor: default !important; }
 
 .left_side {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 150px;
   background-color: #292929;
-  height: 100vh;
-  float: left;
-  position: relative; }
+  height: 100vh; }
   .left_side ul li {
     width: 100%px;
     padding: 12px; }
@@ -54,9 +55,11 @@ h3 {
       margin: 0 auto; }
 
 .right_side {
+  top: 0;
+  right: 0;
+  position: fixed;
   width: 80px;
   background-color: #292929;
-  float: right;
   height: 100vh; }
   .right_side ul {
     position: relative; }

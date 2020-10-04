@@ -8,6 +8,7 @@ body {
 
 .screenForm {
 	position: relative;
+	z-index: -1;
 }
 
 .screenForm .iphoneX {

@@ -1,9 +1,11 @@
 // Caution! The code can bite. Many methods are written as stubs :)
 
 var amountOfElements = 0;
-var curentScreenForm = document.getElementById("iphoneX");
+var numbersOfScreens = 0;
+var curentScreenForm = null;//document.getElementById("iphoneX");
 var currentActiveElement = null;
 var moveable = null;
+var boundsFrameIphoneX = { top: 40, left: 2, bottom: 790, right: 370 };
 
 function newRectangle() {
 	let newBlock = document.createElement('div');
@@ -14,9 +16,9 @@ function newRectangle() {
 		if (moveableStatus == true)
 			moveableStop();
 		else
-			moveableStart(newBlock.id);
+			moveableStart(newBlock.id, curentScreenForm, boundsFrameIphoneX);
 	});
-	moveableStart(newBlock.id);
+	moveableStart(newBlock.id, curentScreenForm, boundsFrameIphoneX);
 }
 
 function newText() {
@@ -38,11 +40,11 @@ function newText() {
 	moveableStart(newBlock.id);
 }
 
-function moveableStart(elementId, container) {
+function moveableStart(_elementId, _container, _bounds) {
 	moveableStop();
-	moveable = new Moveable(curentScreenForm, {
-		target: document.getElementById(elementId),
-		container: curentScreenForm,
+	moveable = new Moveable(_container, {
+		target: document.getElementById(_elementId),
+		container: _container,
 		resizable: true,
 		draggable: true,
 		resizable: true,
@@ -52,8 +54,7 @@ function moveableStart(elementId, container) {
 		pinchable: true,
 		origin: true,
 		snappable: true,
-		bounds: { top: 40, left: 2, bottom: 790, right: 370 },
-
+		bounds: _bounds,
 		keepRatio: true,
 		edge: false,
 		origin: true,
@@ -184,7 +185,24 @@ function moveableStop() {
 }
 
 function newScreenForm() {
+	let newScreen = document.createElement('div');
+	newScreen.className = "screenForm";
+	document.body.append(newScreen);
 
+	var child = document.createElement('div');
+	child.className = "iphoneX";
+	child.id = 'screen' + numbersOfScreens;
+	newScreen.append(child);
+	curentScreenForm = child;
+	curentScreenForm.addEventListener('dblclick', function (e) {
+		moveableStart(child.id, document.body);
+		curentScreenForm = child;
+	});
+	curentScreenForm.addEventListener('click', function (e) {
+		curentScreenForm = child;
+	});
+	moveableStart(child.id, document.body);
+	numbersOfScreens++;
 }
 
 function exportHtml() {
