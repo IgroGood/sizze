@@ -28,7 +28,7 @@ function newRectangle() {
 	newBlock.addEventListener('click', function (e) { //dblclick?
 		if (moveableStatus == true)
 			moveableStop();
-		else{
+		else {
 			moveableStart(newBlock.id, curentScreenForm, boundsFrameIphoneX);
 		}
 	});
@@ -216,7 +216,7 @@ function newScreenForm() {
 	});
 	curentScreenForm.addEventListener('click', function (e) {
 		curentScreenForm = child;
-		
+
 	});
 	moveableStart(child.id, document.body);
 	moveable.resizable = false;
@@ -226,7 +226,85 @@ function newScreenForm() {
 }
 
 function exportHtml() {
-	//TODO
+	let screens = [];
+	document.querySelectorAll('.screenForm').forEach(function (screen) {
+		screens.push({
+			name: screen.firstElementChild.id,
+			html: screen.innerHTML
+		});
+	});
+	console.log(screens);
+	// console.log(encodeURIComponent(JSON.stringify(screens)));
+	let requestStr = 'appName=testApp&data=' + encodeURIComponent(JSON.stringify(screens)),
+		xhr = new XMLHttpRequest();
+
+	// xhr.open('POST', 'index.php', true);
+	xhr.open('POST', 'http://sizze.igrogood.ru/index.php', true);
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	// console.log(requestStr);
+	xhr.send(requestStr);
+	showStatus({ status: 'wait', message: 'Идет экспорт...' });
+	xhr.onreadystatechange = function () { // Ждём ответа от сервера
+		if (xhr.readyState == 4) {
+			if (xhr.status == 200) {
+				let response = JSON.parse(xhr.responseText);
+				console.log(response);
+				showStatus(response);
+				if (response.status == 'error') {
+					console.log('Что-то пошло не так:(');
+				}
+			};
+		};
+	};
+}
+
+function showStatus(response) {
+	// wait, success, error
+	let status = document.querySelector('.status');
+	status.style.display = 'block';
+	status.classList.add(response.status);
+	if (response.status == 'success') {
+		response.message = 'Приложение успешно экспортировано!';
+	}
+	status.querySelector('.status_text').textContent = response.message;
+	if (response.status == 'success') {
+		// viewing=http://sizze.igrogood.ru/37482965,applink=none
+		status.querySelector('.status_view').setAttribute('href', response.viewing);
+		status.querySelector('.status_app').setAttribute('href', response.applink);
+	}
+}
+function closeStatus(close) {
+	close.parentElement.style.display = 'none';
+	close.parentElement.classList.remove('wait', 'error', 'success')
+}
+
+function createTemplate(name) {
+	if (name == 'LoginIn') {
+		let newScreen = document.getElementById('loginInTemplate1');
+		newScreen.setAttribute("style", "");
+		document.body.append(newScreen);
+
+		var child = document.getElementsByClassName('iphoneX');
+		child.id = 'screen' + numbersOfScreens;
+
+		curentScreenForm = child;
+		curentScreenForm.addEventListener('dblclick', function (e) {
+			moveableStart(child.id, document.body);
+			curentScreenForm = child;
+			moveable.resizable = false;
+			moveable.scalable = false;
+			moveable.rotatable = false;
+		});
+		curentScreenForm.addEventListener('click', function (e) {
+			curentScreenForm = child;
+
+		});
+		moveableStart(child.id, document.body);
+		moveable.resizable = false;
+		moveable.scalable = false;
+		moveable.rotatable = false;
+		numbersOfScreens++;
+	}
 }
 
 /* выделение элементов */
