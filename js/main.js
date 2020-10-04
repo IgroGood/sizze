@@ -284,7 +284,7 @@ function createTemplate(name) {
 		newScreen.setAttribute("style", "");
 		document.body.append(newScreen);
 
-		var child = document.getElementsByClassName('iphoneX');
+		var child = document.getElementsByClassName('iphoneX')[0];
 		child.id = 'screen' + numbersOfScreens;
 
 		curentScreenForm = child;
